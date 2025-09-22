@@ -4,11 +4,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torchvision.datasets import MNIST, CIFAR10
 from PIL import Image
-
-STATS = {
-    'cifar10': ((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
-    'mnist': ((0.1307,), (0.3081,))
-}
+from constant import STATS
 
 
 class BaseDataset(Dataset):

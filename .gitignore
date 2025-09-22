@@ -1,2 +1,6 @@
 data/
 checkpoints/
+checkpoints.tar
+logs_old/
+__pycache__/
+utils2.py

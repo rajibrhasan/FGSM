@@ -9,6 +9,7 @@ from torchvision import transforms
 from models import create_model
 from datasets import create_dataset
 from utils import evaluate, load_best_checkpoint, load_checkpoint, save_checkpoint, set_seed
+from constant import STATS, CLASS_NAMES
 
 def train_one_epoch(model, dataloader, criterion, optimizer, device, current_epoch, total_epochs):
     model.train()
@@ -69,6 +70,8 @@ def main():
     parser.add_argument("--restart", action="store_true", help="Restart the training if true, else from scratch")
     parser.add_argument("--num_classes", type=int, default=10, help="Number of classes")
     args = parser.parse_args()
+
+    os.makedirs(args.dir, exist_ok=True)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     set_seed(420)

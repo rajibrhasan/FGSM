@@ -1,0 +1,5 @@
+Setting,Clean Acc,Robust Acc,Untargeted ASR,Targeted_ASR(random),Targeted_ASR(least_likely)
+ε=0.0039, 97.54,96.22, 3.78,0.21,0.00
+ε=0.0078, 97.54,94.29, 5.71,0.56,0.00
+ε=0.0157, 97.54,88.16, 11.84,1.70,0.00
+ε=0.0314, 97.54,70.28, 29.72,6.05,0.00

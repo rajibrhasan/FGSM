@@ -9,6 +9,6 @@ python fgsm_attack.py \
     --dataset $DATASET \
     --model $MODEL \
     --checkpoint_dir $CHECKPOINT_DIR \
-    --batch_size 64 \
+    --batch_size 128 \
     --num_classes 10 \
     --log_dir $LOGS_DIR
