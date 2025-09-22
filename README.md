@@ -69,7 +69,7 @@ bash scripts/attack/tiny_vit_mnist.sh
 
 # Experimental Results
 
-## ResNet-18 - CIFAR-10
+## 📊 ResNet-18 - CIFAR-10
 
 | ϵ | Clean Acc (%) | Robust Acc (%) | Untargeted ASR (%) | Targeted (Random) ASR (%) | Targeted (Least Likely) ASR (%) |
 |---|---------------|----------------|-------------------|---------------------------|---------------------------------|
@@ -78,7 +78,7 @@ bash scripts/attack/tiny_vit_mnist.sh
 | 4/255 | 95.01 | 39.89 | 60.11 | 16.13 | 0.24 |
 | 8/255 | 95.01 | 20.76 | 79.24 | 25.08 | 1.19 |
 
-## ViT-T/16 - CIFAR-10
+## 📊 ViT-T/16 - CIFAR-10
 
 | ϵ | Clean Acc (%) | Robust Acc (%) | Untargeted ASR (%) | Targeted (Random) ASR (%) | Targeted (Least Likely) ASR (%) |
 |---|---------------|----------------|-------------------|---------------------------|---------------------------------|
@@ -87,7 +87,7 @@ bash scripts/attack/tiny_vit_mnist.sh
 | 4/255 | 88.47 | 25.40 | 74.60 | 23.90| 0.81 |
 | 8/255 | 88.47 | 6.21 | 93.79 | 45.51 |7.18 |
 
-## ResNet-18 - MNIST
+## 📊 ResNet-18 - MNIST
 
 | ϵ | Clean Acc (%) | Robust Acc (%) | Untargeted ASR (%) | Targeted (Random) ASR (%) | Targeted (Least Likely) ASR (%) |
 |---|---------------|----------------|-------------------|---------------------------|---------------------------------|
@@ -96,7 +96,7 @@ bash scripts/attack/tiny_vit_mnist.sh
 | 4/255 | 99.34 | 98.79 | 1.21 | 0.05 | 0.00 |
 | 8/255 | 99.34 | 98.01 | 1.99 | 0.20 | 0.00 |
 
-## ViT-T/16 - MNIST
+## 📊 ViT-T/16 - MNIST
 
 | ϵ | Clean Acc (%) | Robust Acc (%) | Untargeted ASR (%) | Targeted (Random) ASR (%) | Targeted (Least Likely) ASR (%) |
 |---|---------------|----------------|-------------------|---------------------------|---------------------------------|
@@ -106,7 +106,7 @@ bash scripts/attack/tiny_vit_mnist.sh
 | 8/255 | 97.54 | 70.28 | 29.72 | 6.05 | 0.00 |
 
 
-# 📈 FGSM Attack Success Rate vs Epsilon
+## 📈 FGSM Attack Success Rate vs Epsilon
 
 This section shows the **Attack Success Rate (ASR)** for each model and dataset with varying perturbation magnitudes (ϵ = 1/255, 2/255, 4/255, 8/255).  
 
