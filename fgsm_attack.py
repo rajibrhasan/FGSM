@@ -23,49 +23,6 @@ def get_random_targets(true_labels, num_classes):
     return torch.tensor(targets, dtype = true_labels.dtype, device = true_labels.device)
 
 
-# def targeted_fgsm_attack(data_loader, model, dset_name, criterion, num_classes, eps, device, target_type):
-#     model.eval()
-#     robust_correct = 0
-#     total = 0
-
-
-
-#     for images, labels in tqdm(data_loader, f'targeted_{target_type}(ε={eps: .4f}): '):
-#         images, labels = images.to(device), labels.to(device)
-#         images.requires_grad = True
-
-#         outputs = model(images)
-#         _, clean_preds = torch.max(outputs, 1)
-
-#         if target_type == 'least_likely':
-#             target_labels = outputs.argmin(dim = 1)
-#         elif target_type == 'random':
-#             target_labels = get_random_targets(labels, num_classes)
-
-#         mask = (clean_preds != target_labels)
-#         if not mask.any():
-#             continue
-            
-#         loss = criterion(outputs, target_labels)
-
-#         model.zero_grad()
-#         loss.backward()
-
-#         with torch.no_grad():
-#             adv_images = torch.clamp(images - eps * images.grad.sign(), 0, 1)
-#             robust_outputs = model(adv_images)
-#             _, robust_preds = torch.max(robust_outputs, 1)
-#             robust_correct += ((robust_preds == target_labels) & mask).sum().item()
-#             total += mask.sum().item()
-    
-#     if total == 0:
-#         return 0.0
-    
-#     asr = robust_correct / total
-
-#     return asr
-
-
 def fgsm_attack(data_loader, model, dset_name, criterion, eps, num_classes, device, target_type='none'):
     model.eval()
     robust_correct = 0
