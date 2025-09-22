@@ -136,8 +136,8 @@ def main():
 
     checkpoint_path = os.path.join(args.checkpoint_dir, 'best_model.pth')
     val_acc = load_best_checkpoint(model, checkpoint_path, device)
-    # val_loss, val_acc = evaluate(model, val_loader, criterion, device)
-    # print(f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}")
+    val_loss, val_acc = evaluate(model, val_loader, criterion, device)
+    print(f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}")
 
     results = []
    
